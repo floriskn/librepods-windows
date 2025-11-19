@@ -1,0 +1,19 @@
+# AirPods BLE
+
+**Tech Demo:** A Rust program to monitor BLE advertisements from Apple AirPods and display basic info.
+
+---
+
+## Features
+
+- Detects BLE advertisements from AirPods on Windows.
+- Parses manufacturer data into structured `AirPods` structs.
+- Shows model, battery status, and in-ear/charging state for AirPods Pro 2.
+
+---
+
+## Run
+
+```bash
+cargo run --release
+```
