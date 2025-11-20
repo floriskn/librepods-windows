@@ -62,11 +62,9 @@ fn main() -> Result<()> {
                 // Try parsing AirPods data
                 if let Some(data) = map_clone.lock().unwrap().get(&VENDOR_ID) {
                     if let Some(airpod) = as_airpods(data) {
-                        if airpod.get_model_instance() == airpod::Model::AirPodsPro2 {
-                            let info = airpod.debug_info();
-                            print!("\r{}", info);
-                            io::stdout().flush().unwrap();
-                        }
+                        let info = airpod.debug_info();
+                        print!("\r{}", info);
+                        io::stdout().flush().unwrap();
                     }
                 }
             }
